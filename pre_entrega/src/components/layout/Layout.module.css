@@ -1,0 +1,15 @@
+/* src/components/Layout/Layout.module.css */
+
+.layoutWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Obliga a toda la estructura a ocupar el 100% de la pantalla */
+}
+
+.mainContent {
+  flex: 1; /* Hace que el contenido central se estire automáticamente para empujar al Footer al fondo */
+  width: 100%;
+  max-width: 1200px; /* Alineado con el ancho máximo del Header y Footer */
+  margin: 0 auto;    /* Centra el contenedor horizontalmente en la pantalla */
+  padding: 40px 20px; /* Margen superior e inferior para separar el catálogo del Header/Footer */
+}

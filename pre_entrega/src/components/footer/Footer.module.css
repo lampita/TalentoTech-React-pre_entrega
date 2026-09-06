@@ -1,0 +1,82 @@
+/* src/components/Footer/Footer.module.css */
+.footer {
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinea verticalmente ambos bloques al centro */
+}
+
+/* --- SECCIÓN COPYRIGHT --- */
+.copyrightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.text {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.brand {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+.logoAccent {
+  color: var(--blue-playstation);
+}
+
+.subtext {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* --- SECCIÓN REDES SOCIALES --- */
+.socialsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.socialsTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.socialLink {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Efecto hover gamer */
+.socialLink:hover {
+  color: var(--blue-playstation);
+  transform: translateY(-2px);
+}
+
+.socialName {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}

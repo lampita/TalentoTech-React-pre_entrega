@@ -1,0 +1,95 @@
+/* src/components/Header/Header.module.css */
+.header {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* Efecto traslúcido premium estilo consola moderna */
+  backdrop-filter: blur(8px);
+  background-color: rgba(18, 25, 38, 0.85);
+}
+
+.headerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logoAccent {
+  color: var(--blue-playstation);
+}
+
+.navList {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+
+/* src/components/Header/Header.module.css */
+
+/* ... (Todo lo anterior: .header, .headerContainer, .logo, .navList quedan igual) ... */
+
+.navLink {
+  font-family: 'Plus Jakarta Sans', sans-serif; /* 🌟 Agregamos la fuente limpia */
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+  font-size: 1rem;
+  position: relative; 
+  padding: 4px 0; /* 🌟 Agregamos un pequeño padding vertical para alejar el texto de la línea */
+}
+
+.navLink:hover {
+  color: var(--blue-playstation);
+}
+
+.navLink.active {
+  color: var(--text-primary);
+  font-weight: 600; /* 🌟 Un poquito más de grosor para notar que está seleccionado */
+}
+
+/* El indicador flotante estilo PlayStation Store */
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: -12px; /* 🌟 Lo bajamos a -12px para que flote elegantemente abajo del texto */
+  left: 0;
+  width: 100%;
+  height: 3px;   /* 🌟 3px le da un aspecto más sólido de barra de interfaz */
+  background-color: var(--blue-playstation);
+  border-radius: 2px; /* 🌟 Bordes redondeados para la barrita */
+}
+
+/* ... (Tu código de .cartWidget y .cartBadge queda igual) ... */
+
+
+.cartWidget {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: var(--blue-playstation);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-family: 'Space Grotesk', sans-serif;
+}
