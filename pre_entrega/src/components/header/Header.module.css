@@ -1,95 +1,87 @@
-/* src/components/Header/Header.module.css */
 .header {
-  background-color: var(--bg-surface);
-  border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 100;
-  /* Efecto traslúcido premium estilo consola moderna */
-  backdrop-filter: blur(8px);
-  background-color: rgba(18, 25, 38, 0.85);
+  border-top: 3px solid var(--blue-playstation);
+  background-color: rgba(10, 15, 24, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 114, 206, 0.15);
 }
 
 .headerContainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 30px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.6rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .logoAccent {
   color: var(--blue-playstation);
+  text-shadow: 0 0 15px rgba(0, 114, 206, 0.6);
 }
 
 .navList {
   display: flex;
-  gap: 30px;
+  gap: 12px;
   list-style: none;
 }
 
-
-/* src/components/Header/Header.module.css */
-
-/* ... (Todo lo anterior: .header, .headerContainer, .logo, .navList quedan igual) ... */
-
 .navLink {
-  font-family: 'Plus Jakarta Sans', sans-serif; /* 🌟 Agregamos la fuente limpia */
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
   color: var(--text-muted);
-  transition: color 0.2s ease;
-  font-size: 1rem;
-  position: relative; 
-  padding: 4px 0; /* 🌟 Agregamos un pequeño padding vertical para alejar el texto de la línea */
+  font-size: 0.95rem;
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navLink:hover {
-  color: var(--blue-playstation);
+  color: var(--text-primary);
+  background-color: rgba(0, 114, 206, 0.12); 
 }
 
 .navLink.active {
   color: var(--text-primary);
-  font-weight: 600; /* 🌟 Un poquito más de grosor para notar que está seleccionado */
+  font-weight: 600;
+  background-color: rgba(0, 114, 206, 0.2);
 }
-
-/* El indicador flotante estilo PlayStation Store */
-.navLink.active::after {
-  content: '';
-  position: absolute;
-  bottom: -12px; /* 🌟 Lo bajamos a -12px para que flote elegantemente abajo del texto */
-  left: 0;
-  width: 100%;
-  height: 3px;   /* 🌟 3px le da un aspecto más sólido de barra de interfaz */
-  background-color: var(--blue-playstation);
-  border-radius: 2px; /* 🌟 Bordes redondeados para la barrita */
-}
-
-/* ... (Tu código de .cartWidget y .cartBadge queda igual) ... */
-
 
 .cartWidget {
   position: relative;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.cartWidget:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .cartBadge {
   position: absolute;
-  top: -8px;
-  right: -10px;
-  background-color: var(--blue-playstation);
+  top: 0px;
+  right: 0px;
+  background-color: rgb(178, 34, 34);
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   padding: 2px 6px;
-  border-radius: 50%;
-  font-family: 'Space Grotesk', sans-serif;
+  border-radius: 10px;
+  font-family: "Space Grotesk", sans-serif;
+  box-shadow: 0 0 8px rgba(0, 114, 206, 0.8);
 }

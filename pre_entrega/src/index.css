@@ -1,29 +1,28 @@
 :root {
-  /* Variables obligatorias para que tus module.css sepan qué colores usar */
-  --bg-main: #0a0f18;          /* Fondo oscuro profundo */
-  --bg-surface: #121926;       /* Fondo de tarjetas, header y footer */
-  --blue-playstation: #0072ce; /* Azul eléctrico de acento */
-  --blue-hover: #00439c;       /* Azul más oscuro para estados interactivos */
-  --text-primary: #ffffff;     /* Texto blanco */
-  --text-muted: #94a3b8;       /* Texto gris secundario */
-  --border-color: #1e293b;     /* Bordes sutiles */
+  --bg-main: #0a0f18;
+  --bg-surface: #121926;
+  --blue-playstation: #0072ce;
+  --blue-hover: #00439c;
+  --text-primary: #ffffff;
+  --text-muted: #94a3b8;
+  --border-color: #1e293b;
 }
 
 * {
   margin: 0;
   padding: 0;
-  /* 🌟 CORRECCIÓN CRÍTICA: Debe ser border-box para que los layouts funcionen */
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--bg-main);
   color: var(--text-primary);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
 }
+

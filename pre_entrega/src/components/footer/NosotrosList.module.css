@@ -1,0 +1,98 @@
+h2 {
+  margin: 0;
+  font-size: 15px;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+}
+h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+.fontCargo{
+    font-size: 12px;
+    color: #7f8c8d;
+    font-weight: bold;
+
+}
+.fontMail{
+    font-size: 12px;
+    color: #3498db;
+}
+.mensajeErro{
+    position: fixed;
+          bottom: 80px;
+          right: 20px;
+          z-index: 9999;
+          background-color: #ffeded;
+          color: #c0392b;
+          padding: 12px;
+          border-radius: 8px;
+          font-family: sans-serif;
+          box-shadow: 2px 5px 0px#7f8c8d;
+        }
+
+.contenedorMain {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 320px;
+  font-family: sans-serif;
+}
+
+.contenedorCabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.botonCerrar {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s;
+}
+
+.estiloLista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.foto {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+.tarjeta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-left: 4px solid #3498db;
+  border-bottom: 2px solid #3498db;
+}

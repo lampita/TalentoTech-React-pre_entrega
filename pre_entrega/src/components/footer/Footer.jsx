@@ -1,34 +1,48 @@
-// src/components/Footer/Footer.jsx
 import styles from "./Footer.module.css";
+import { useState } from "react";
+import NosotrosList from "./NosotrosList";
 
-export const Footer = () => {
+function Footer() {
+  const [mostrarNosotros, setMostrarNosotros] = useState(false);
+  const toggleNosotros = () => setMostrarNosotros((prev) => !prev);
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
-        {/* Sección Izquierda: Copyright */}
         <div className={styles.copyrightSection}>
-          <p className={styles.text}>
-            &copy; {new Date().getFullYear()} <span className={styles.brand}>PS4<span className={styles.logoAccent}>Store</span></span>. Todos los derechos reservados.
-          </p>
-          <span className={styles.subtext}>Proyecto de práctica React + Vite</span>
+          <span className={styles.text}>
+            <span className={styles.brand}>
+              PS4<span className={styles.logoAccent}>Store</span>
+            </span>
+          </span>
+          <span className={styles.subtext}>
+            © 2026 Todos los derechos reservados.
+          </span>
         </div>
 
-        {/* Sección Derecha: Redes Sociales */}
-        <div className={styles.socialsSection}>
-          <h4 className={styles.socialsTitle}>Síguenos</h4>
-          <div className={styles.socialLinks}>
-            <a href="#instagram" className={styles.socialLink}>
-              📸 <span className={styles.socialName}>Instagram</span>
-            </a>
-            <a href="#twitter" className={styles.socialLink}>
-              🐦 <span className={styles.socialName}>X</span>
-            </a>
-            <a href="#discord" className={styles.socialLink}>
-              💬 <span className={styles.socialName}>Discord</span>
-            </a>
-          </div>
-        </div>
+        <nav className={styles.navSection}>
+          <button
+            className={`${styles.button} ${mostrarNosotros ? styles.buttonActive : ""}`}
+            onClick={(e) => {
+              e.preventDefault();
+              toggleNosotros();
+            }}
+          >
+            Acerca de Nosotros
+          </button>
+
+          {mostrarNosotros && (
+            <div className={styles.modalWrapper}>
+              <NosotrosList
+                Mensaje="Nuestro Equipo"
+                onCerrar={toggleNosotros}
+              />
+            </div>
+          )}
+        </nav>
       </div>
     </footer>
   );
-};
+}
+
+export default Footer;

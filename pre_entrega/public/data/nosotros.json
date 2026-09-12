@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nombre": "Arthur Pendelton",
+    "foto": "/images/nosotros/Arthur.jpg",
+    "cargo": "CEO",
+    "mail": "apendelton@ps4store.com"
+  },
+  {
+    "id": 2,
+    "nombre": "Damian Frost",
+    "foto": "/images/nosotros/Damian.jpg",
+    "cargo": "Soporte Técnico",
+    "mail": "dfrost@ps4store.com"
+  },
+  {
+    "id": 3,
+    "nombre": "Elena Sterling",
+    "foto": "/images/nosotros/Elena.jpg",
+    "cargo": "Atención al Público",
+    "mail": "esterling@ps4store.com"
+  },
+  {
+    "id": 4,
+    "nombre": "Kaelem Vane",
+    "foto": "/images/nosotros/Kaelem.jpg",
+    "cargo": "Atención al Público",
+    "mail": "kvane@ps4store.com"
+  }
+]

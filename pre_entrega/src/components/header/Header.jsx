@@ -1,16 +1,13 @@
-// src/components/Header/Header.jsx
 import styles from "./Header.module.css";
 
 export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        {/* Logo */}
         <div className={styles.logo}>
           PS4<span className={styles.logoAccent}>Store</span>
         </div>
 
-        {/* Barra de navegación */}
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             <li>
@@ -19,8 +16,10 @@ export const Header = () => {
               </a>
             </li>
             <li>
-              {/* 🌟 REVISÁ ESTA LÍNEA: Asegurate de que haya un ESPACIO entre las dos llaves dentro de las comillas */}
-              <a href="#productos" className={`${styles.navLink} ${styles.active}`}>
+              <a
+                href="#productos"
+                className={`${styles.navLink} ${styles.active}`}
+              >
                 Productos
               </a>
             </li>
@@ -31,8 +30,6 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
-
-        {/* Carrito */}
         <div className={styles.cartWidget}>
           <span className={styles.cartIcon}>🛒</span>
           <span className={styles.cartBadge}>0</span>

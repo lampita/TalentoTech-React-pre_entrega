@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Xbox-Series-5-2.png",
+    "title": "EA SPORTS FC 24 PS4",
+    "price": 24490,
+    "status": "masVendido",
+    "stock": 14
+  },
+  {
+    "id": 2,
+    "stars": 4,
+    "favorito": false,
+    "image": "/images/cards/Nba2k24.png",
+    "title": "NBA 2K24 PS4",
+    "price": 38514,
+    "status": "preventa",
+    "stock": 3
+  },
+  {
+    "id": 3,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Call-Of-Duty-Modern-Warfare-2.jpg",
+    "title": "CALL OF DUTY MODERN WARFARE II PS4",
+    "price": 32764,
+    "status": "masVendido",
+    "stock": 29
+  },
+  {
+    "id": 4,
+    "stars": 3,
+    "favorito": false,
+    "image": "/images/cards/Dead-Island.png",
+    "title": "Dead Island II PS4",
+    "price": 43996,
+    "status": "preventa",
+    "stock": 8
+  },
+  {
+    "id": 5,
+    "stars": 3,
+    "favorito": false,
+    "image": "/images/cards/Resident-Evil-4-Remake.jpg",
+    "title": "Resident Evil 4 Remake PS4",
+    "price": 25490,
+    "status": "preventa",
+    "stock": 22
+  },
+  {
+    "id": 6,
+    "stars": 4,
+    "favorito": false,
+    "image": "/images/cards/Wwe-2k23-Ps4-Digital.jpg",
+    "title": "WWE 2K23",
+    "price": 21264,
+    "status": "masVendido",
+    "stock": 17
+  },
+  {
+    "id": 7,
+    "stars": 2,
+    "favorito": false,
+    "image": "/images/cards/God-Of-War-Ragnarok.jpg",
+    "title": "God of War Ragnarok",
+    "price": 24490,
+    "status": "masVendido",
+    "stock": 1
+  },
+  {
+    "id": 8,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Fifa-23.jpg",
+    "title": "Fifa 23 Español Latino PS4",
+    "price": 21264,
+    "status": "preventa",
+    "stock": 25
+  },
+  {
+    "id": 9,
+    "stars": 4,
+    "favorito": false,
+    "image": "/images/cards/Nba-2k23.jpg",
+    "title": "NBA 2K23",
+    "price": 20114,
+    "status": "ofertas",
+    "stock": 11
+  },
+  {
+    "id": 10,
+    "stars": 4,
+    "favorito": false,
+    "image": "/images/cards/Gta-Trilogy-Definitive-Edition.jpg",
+    "title": "GTA Trilogi",
+    "price": 31614,
+    "status": "preventa",
+    "stock": 30
+  },
+  {
+    "id": 11,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/A-Way-Out.jpg",
+    "title": "A Way Out PS4",
+    "price": 25490,
+    "status": "ofertas",
+    "stock": 6
+  },
+  {
+    "id": 12,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Ace-Combat-8-Skies.jpg",
+    "title": "Ace Combat 7: Skies Unknown",
+    "price": 15514,
+    "status": "masVendido",
+    "stock": 19
+  },
+  {
+    "id": 13,
+    "stars": 3,
+    "favorito": false,
+    "image": "/images/cards/Airport-Simulator-Day-Night-1.jpg",
+    "title": "Airport Simulator : Day & Night",
+    "price": 9660,
+    "status": "ofertas",
+    "stock": 14
+  },
+  {
+    "id": 14,
+    "stars": 3,
+    "favorito": false,
+    "image": "/images/cards/Alan-Wake-Remastered.jpg",
+    "title": "Alan Wake: Remastered",
+    "price": 12650,
+    "status": "preventa",
+    "stock": 2
+  },
+  {
+    "id": 15,
+    "stars": 2,
+    "favorito": false,
+    "image": "/images/cards/Xbox-Series-6.png",
+    "title": "Alien: Isolation ",
+    "price": 12064,
+    "status": "preventa",
+    "stock": 28
+  },
+  {
+    "id": 16,
+    "stars": 1,
+    "favorito": false,
+    "image": "/images/cards/Xbox-Series-7.png",
+    "title": "Anthem",
+    "price": 17584,
+    "status": "ofertas",
+    "stock": 5
+  },
+  {
+    "id": 17,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Ao-Internacional-Tennis.jpg",
+    "title": "AO International Tennis",
+    "price": 16664,
+    "status": "ofertas",
+    "stock": 21
+  },
+  {
+    "id": 18,
+    "stars": 2,
+    "favorito": false,
+    "image": "/images/cards/Ark-Survival-Evolved.jpg",
+    "title": "Ark Survival Evolved",
+    "price": 14470,
+    "status": "ofertas",
+    "stock": 13
+  },
+  {
+    "id": 19,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Armored-Core-Vi.jpg",
+    "title": "Armored Core VI Fires of Rubicon PS4",
+    "price": 41964,
+    "status": "masVendido",
+    "stock": 27
+  },
+  {
+    "id": 20,
+    "stars": 4,
+    "favorito": false,
+    "image": "/images/cards/Assetto-Corsa.jpg",
+    "title": "Assetto Corsa",
+    "price": 9764,
+    "status": "masVendido",
+    "stock": 8
+  },
+  {
+    "id": 21,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Battlefield-2042.jpg",
+    "title": "Battlefield 2042",
+    "price": 11144,
+    "status": "ofertas",
+    "stock": 16
+  },
+  {
+    "id": 22,
+    "stars": 4,
+    "favorito": false,
+    "image": "/images/cards/Battlefield-1.jpg",
+    "title": "Battlefield 1",
+    "price": 9764,
+    "status": "ofertas",
+    "stock": 24
+  },
+  {
+    "id": 23,
+    "stars": 3,
+    "favorito": false,
+    "image": "/images/cards/Battlefield-4.jpg",
+    "title": "Battlefield 4",
+    "price": 17814,
+    "status": "ofertas",
+    "stock": 10
+  },
+  {
+    "id": 24,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Battlefield-Hardline.jpg",
+    "title": "Battlefield Hardline",
+    "price": 6314,
+    "status": "ofertas",
+    "stock": 12
+  },
+  {
+    "id": 25,
+    "stars": 2,
+    "favorito": false,
+    "image": "/images/cards/Zombie-Army-4.jpg",
+    "title": "Zombie Army 4: Dead War",
+    "price": 34850,
+    "status": "masVendido",
+    "stock": 7
+  },
+  {
+    "id": 26,
+    "stars": 4,
+    "favorito": false,
+    "image": "/images/cards/Wrc-Generations-1.png",
+    "title": "WRC Generations PS4",
+    "price": 29950,
+    "status": "ofertas",
+    "stock": 18
+  },
+  {
+    "id": 27,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Vampyr.jpg",
+    "title": "Vampyr",
+    "price": 11390,
+    "status": "ofertas",
+    "stock": 23
+  },
+  {
+    "id": 28,
+    "stars": 3,
+    "favorito": false,
+    "image": "/images/cards/Unravel.jpg",
+    "title": "Unravel Pack 1+2",
+    "price": 13490,
+    "status": "masVendido",
+    "stock": 5
+  },
+  {
+    "id": 29,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Uncharted-4-Bundle.jpg",
+    "title": "Uncharted 4",
+    "price": 15490,
+    "status": "preventa",
+    "stock": 21
+  },
+  {
+    "id": 30,
+    "stars": 4,
+    "favorito": false,
+    "image": "/images/cards/Ufc-4-1.jpg",
+    "title": "UFC 4",
+    "price": 27490,
+    "status": "ofertas",
+    "stock": 15
+  },
+  {
+    "id": 31,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Tony-Hawks-12.jpg",
+    "title": "Tony Hawks Pro Skater 1 y 2",
+    "price": 16490,
+    "status": "preventa",
+    "stock": 9
+  },
+  {
+    "id": 32,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/The-Division-2-Ps4.jpg",
+    "title": "Tom Clancy´s The Division 2",
+    "price": 15490,
+    "status": "preventa",
+    "stock": 13
+  },
+  {
+    "id": 33,
+    "stars": 4,
+    "favorito": false,
+    "image": "/images/cards/Raimbow-Six-Siege.jpg",
+    "title": "Tom Clancy´s Rainbows Six Siegue SUBS",
+    "price": 16490,
+    "status": "ofertas",
+    "stock": 26
+  },
+  {
+    "id": 34,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Rainbow-Six-Siege-Extraction.jpg",
+    "title": "Tom Clancy´s Rainbows Six: Extraction",
+    "price": 15490,
+    "status": "ofertas",
+    "stock": 4
+  },
+  {
+    "id": 35,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Ghost-Recon-Breakpoint-Ps4.jpg",
+    "title": "Tom Clancy´s Ghost Recon Breakpoint",
+    "price": 45490,
+    "status": "ofertas",
+    "stock": 20
+  },
+  {
+    "id": 36,
+    "stars": 3,
+    "favorito": false,
+    "image": "/images/cards/The-Witcher-3.jpg",
+    "title": "The Witcher 3: Wild Hunt - Subtitulado",
+    "price": 15490,
+    "status": "preventa",
+    "stock": 17
+  },
+  {
+    "id": 37,
+    "stars": 3,
+    "favorito": false,
+    "image": "/images/cards/The-Texas-Massacre.jpg",
+    "title": "The Texas Saw Massacre",
+    "price": 28490,
+    "status": "ofertas",
+    "stock": 22
+  },
+  {
+    "id": 38,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/The-Last-Of-Us-Remastered-1.jpg",
+    "title": "The Last of us Remastered",
+    "price": 19465,
+    "status": "ofertas",
+    "stock": 8
+  },
+  {
+    "id": 39,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/The-Last-Of-Us-Parte-2.jpg",
+    "title": "The Last of us Parte 2",
+    "price": 36490,
+    "status": "preventa",
+    "stock": 11
+  },
+  {
+    "id": 40,
+    "stars": 4,
+    "favorito": false,
+    "image": "/images/cards/The-Hunter-Wild.jpg",
+    "title": "The Hunter: Call of the Wild",
+    "price": 23490,
+    "status": "ofertas",
+    "stock": 14
+  },
+  {
+    "id": 41,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Stray-1.jpg",
+    "title": "Stray",
+    "price": 22490,
+    "status": "preventa",
+    "stock": 2
+  },
+  {
+    "id": 42,
+    "stars": 2,
+    "favorito": false,
+    "image": "/images/cards/Spiderman-Goty-1.jpg",
+    "title": "Spider-Man: Game of The Year Español",
+    "price": 23490,
+    "status": "preventa",
+    "stock": 19
+  },
+  {
+    "id": 43,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Spiderman-Miles-Morales-1.jpg",
+    "title": "Spider-Man: Miles Morales",
+    "price": 23490,
+    "status": "masVendido",
+    "stock": 27
+  },
+  {
+    "id": 44,
+    "stars": 3,
+    "favorito": false,
+    "image": "/images/cards/Sonic-Mania.jpg",
+    "title": "Sonic Mania",
+    "price": 15490,
+    "status": "masVendido",
+    "stock": 6
+  },
+  {
+    "id": 45,
+    "stars": 5,
+    "favorito": false,
+    "image": "/images/cards/Sonic-Origins.jpg",
+    "title": "Sonic Origins",
+    "price": 36490,
+    "status": "preventa",
+    "stock": 12
+  }
+]

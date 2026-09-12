@@ -1,9 +1,13 @@
-/* src/components/Footer/Footer.module.css */
 .footer {
-  background-color: var(--bg-surface);
-  border-top: 1px solid var(--border-color);
-  padding: 40px 20px;
+  
+  background-color: rgba(10, 15, 24, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  padding: 30px 20px;
   width: 100%;
+  border-top: 1px solid rgba(0, 114, 206, 0.2); 
+  box-shadow: 0 -4px 30px rgba(0, 114, 206, 0.15);
 }
 
 .footerContainer {
@@ -11,72 +15,71 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Alinea verticalmente ambos bloques al centro */
+  align-items: center;
 }
 
-/* --- SECCIÓN COPYRIGHT --- */
 .copyrightSection {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .text {
-  color: var(--text-primary);
-  font-size: 0.95rem;
-  font-weight: 500;
+  color: #ffffff;
+  font-size: 1.1rem;
 }
 
 .brand {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .logoAccent {
   color: var(--blue-playstation);
+  text-shadow: 0 0 10px rgba(0, 114, 206, 0.4);
 }
 
 .subtext {
-  color: var(--text-muted);
+  color: var(--text-muted, #8a99a8);
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 0.8rem;
 }
 
-/* --- SECCIÓN REDES SOCIALES --- */
-.socialsSection {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.socialsTitle {
-  font-family: 'Space Grotesk', sans-serif;
-  color: var(--text-primary);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-.socialLinks {
-  display: flex;
-  gap: 20px;
-}
-
-.socialLink {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  font-weight: 500;
+.navSection {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 6px;
-  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-/* Efecto hover gamer */
-.socialLink:hover {
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover {
   color: var(--blue-playstation);
-  transform: translateY(-2px);
+  background-color: rgba(0, 114, 206, 0.12);
 }
 
-.socialName {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+/* Estado activo cuando la sección Nosotros está abierta */
+.buttonActive {
+  color: var(--blue-playstation);
+  font-weight: 600;
+  background-color: rgba(0, 114, 206, 0.2);
+}
+
+.modalWrapper {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  z-index: 10;
 }
