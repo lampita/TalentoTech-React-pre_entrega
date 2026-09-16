@@ -1,6 +1,9 @@
 import styles from "./Header.module.css";
+import { NavLink } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
 
 export const Header = () => {
+  const { totalItems } = useCart();
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
@@ -11,29 +14,39 @@ export const Header = () => {
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             <li>
-              <a href="#inicio" className={styles.navLink}>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `${styles.navLink} ${isActive ? styles.active : ""}`
+                }
+              >
                 Inicio
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="#productos"
-                className={`${styles.navLink} ${styles.active}`}
+              <NavLink
+                to="/productos"
+                className={({ isActive }) =>
+                  `${styles.navLink} ${isActive ? styles.active : ""}`
+                }
               >
                 Productos
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#contacto" className={styles.navLink}>
+              <NavLink
+                to="/contacto"
+                className={`${styles.navLink} ${styles.disabled}`}
+              >
                 Contacto
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
-        <div className={styles.cartWidget}>
+        <NavLink to="/carrito" className={styles.cartWidget}>
           <span className={styles.cartIcon}>🛒</span>
-          <span className={styles.cartBadge}>0</span>
-        </div>
+          <span className={styles.cartBadge}>{totalItems}</span>
+        </NavLink>
       </div>
     </header>
   );

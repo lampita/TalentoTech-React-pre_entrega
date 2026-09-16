@@ -59,6 +59,11 @@
   background-color: rgba(0, 114, 206, 0.2);
 }
 
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
 .cartWidget {
   position: relative;
   cursor: pointer;

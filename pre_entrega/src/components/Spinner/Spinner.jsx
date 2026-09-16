@@ -28,7 +28,7 @@ export function Spinner() {
       `}</style>
 
       <p style={{ marginTop: "15px", fontFamily: "sans-serif", color: "#666" }}>
-        Cargando por favor espere...
+        Cargando, por favor espere...
       </p>
     </div>
   );

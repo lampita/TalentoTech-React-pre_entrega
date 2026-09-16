@@ -1,12 +1,11 @@
 .footer {
-  
   background-color: rgba(10, 15, 24, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  
+
   padding: 30px 20px;
   width: 100%;
-  border-top: 1px solid rgba(0, 114, 206, 0.2); 
+  border-top: 1px solid rgba(0, 114, 206, 0.2);
   box-shadow: 0 -4px 30px rgba(0, 114, 206, 0.15);
 }
 
@@ -70,7 +69,6 @@
   background-color: rgba(0, 114, 206, 0.12);
 }
 
-/* Estado activo cuando la sección Nosotros está abierta */
 .buttonActive {
   color: var(--blue-playstation);
   font-weight: 600;

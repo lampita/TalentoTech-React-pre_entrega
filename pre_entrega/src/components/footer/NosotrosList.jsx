@@ -28,17 +28,16 @@ function NosotrosList({ Mensaje, onCerrar }) {
     obtenerNosotros();
   }, []);
 
-  // 1. Contenedor fijo abajo a la derecha para la carga o el error
   if (cargando) {
     return <Spinner />;
   }
 
   if (error) {
     return (
-      <div
-        className={styles.mensajeErro}
-      >
-        <p style={{ margin: 0, fontSize: "14px", fontWeight: "bold" }}>Error: {error}</p>
+      <div className={styles.mensajeErro}>
+        <p style={{ margin: 0, fontSize: "14px", fontWeight: "bold" }}>
+          Error: {error}
+        </p>
       </div>
     );
   }
@@ -69,7 +68,7 @@ function NosotrosList({ Mensaje, onCerrar }) {
             <div
               style={{ display: "flex", flexDirection: "column", gap: "2px" }}
             >
-              <h2>{miembro.nombre}</h2>
+              <h3>{miembro.nombre}</h3>
               <span className={styles.fontCargo}>{miembro.cargo}</span>
               <span className={styles.fontMail}>{miembro.mail}</span>
             </div>
