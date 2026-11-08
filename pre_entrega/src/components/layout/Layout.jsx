@@ -1,18 +1,18 @@
-
+import { Outlet } from "react-router-dom";
 import { Header } from "../Header/Header";
-import  Footer  from "../Footer/Footer";
+import Footer from "../Footer/Footer";
 import styles from "./Layout.module.css";
 
-export const Layout = ({ children }) => {
+export const Layout = () => {
   return (
     <div className={styles.layoutWrapper}>
       <Header />
 
-      <main className={styles.mainContent}>{children}</main>
+      <main className={styles.mainContent}>
+        <Outlet />
+      </main>
 
       <Footer />
     </div>
   );
 };
-
-

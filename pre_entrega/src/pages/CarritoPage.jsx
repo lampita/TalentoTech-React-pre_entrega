@@ -21,7 +21,7 @@ export const CarritoPage = () => {
     return (
       <div className={styles.emptyContainer}>
         <img
-          src="/cart/mariokart.png"
+          src="src\assets\images\cart\mariokart.png"
           alt="Carrito Vacío"
           className={styles.marioImage}
         />
