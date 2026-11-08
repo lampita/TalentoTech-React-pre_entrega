@@ -4,6 +4,7 @@ const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [favoritos, setFavoritos] = useState([]);
 
   const addToCart = (game) => {
     setCart((prevCart) => {
@@ -36,16 +37,24 @@ export const CartProvider = ({ children }) => {
   const removeItem = (gameId) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== gameId));
   };
-  
+
   const clearCart = () => setCart([]);
 
-  
   const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
   const totalPrice = cart.reduce(
     (total, item) => total + item.price * item.quantity,
     0,
   );
-
+  const toggleFavorito = (gameId) => {
+    setFavoritos((prevFavoritos) => {
+      if (prevFavoritos.includes(gameId)) {
+        return prevFavoritos.filter((id) => id !== gameId);
+      } else {
+        return [...prevFavoritos, gameId];
+      }
+    });
+  };
+console.log(favoritos)
   return (
     <CartContext.Provider
       value={{
@@ -56,6 +65,8 @@ export const CartProvider = ({ children }) => {
         clearCart,
         totalItems,
         totalPrice,
+        favoritos,
+        toggleFavorito,
       }}
     >
       {children}

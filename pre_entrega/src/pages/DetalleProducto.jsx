@@ -22,7 +22,6 @@ export const DetalleProducto = () => {
         }
 
         const datos = await respuesta.json();
-
         const juegoEncontrado = datos.find((juego) => juego.id === Number(id));
 
         if (!juegoEncontrado) {
@@ -47,9 +46,6 @@ export const DetalleProducto = () => {
 
   return (
     <div className={styles.detalleContainer}>
-      <span className={styles.warningIcon}>⚠️</span>
-      <h2 className={styles.pageTitle}>Ficha de Producto en Construcción</h2>
-
       <div className={styles.productPreview}>
         <div className={styles.imageWrapper}>
           <img
@@ -67,6 +63,9 @@ export const DetalleProducto = () => {
           ))}
           <span className={styles.starsLabel}>({producto.stars} / 5)</span>
         </div>
+
+        {/* Agregada la descripción del producto */}
+        <p className={styles.gameDescription}>{producto.descripcion}</p>
       </div>
 
       <button

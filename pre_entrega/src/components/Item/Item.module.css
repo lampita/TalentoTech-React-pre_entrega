@@ -48,6 +48,7 @@
   margin: 6px 0 14px 0;
 }
 
+/* El botón ahora es solo el contenedor que agranda la estrella interna al hacer hover */
 .favoriteBtn {
   background: none;
   border: none;
@@ -55,25 +56,11 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: var(--text-muted);
-  transition:
-    transform 0.2s ease,
-    color 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .favoriteBtn:hover {
   transform: scale(1.15);
-  color: #eab308;
-}
-
-.activeFav {
-  color: #f59e0b !important;
-  filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.4));
-}
-
-.starIcon {
-  width: 22px;
-  height: 22px;
 }
 
 .gameTitle {
@@ -115,11 +102,8 @@
   padding: 8px 14px;
   border-radius: 8px;
   cursor: pointer;
-
   opacity: 0;
-
   transform: translateY(5px);
-
   transition:
     opacity 0.25s ease,
     transform 0.25s ease,
@@ -137,4 +121,11 @@
 
 .addToCartBtn:active {
   transform: scale(0.95);
+}
+
+.gameImageLink {
+  display: block;
+  width: 100%;
+  text-decoration: none; 
+  cursor: pointer;
 }

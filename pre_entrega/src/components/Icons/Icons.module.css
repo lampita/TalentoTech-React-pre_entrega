@@ -1,0 +1,12 @@
+.starIcon {
+  width: 22px;
+  height: 22px;
+  color: #64748b; /* Equivalente al var(--text-muted) de tus tarjetas */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* El color dorado brillante cuando la estrella es favorita o activa */
+.activeStar {
+  color: #f59e0b !important;
+  filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.4));
+}

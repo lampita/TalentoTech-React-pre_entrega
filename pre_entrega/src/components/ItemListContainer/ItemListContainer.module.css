@@ -1,0 +1,95 @@
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  background-color: rgba(10, 15, 24, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 114, 206, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para los selectores desplegables personalizados */
+.selectWrapper {
+  position: relative;
+  min-width: 180px;
+}
+
+.filterSelect {
+  width: 100%;
+  padding: 10px 16px;
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  appearance: none; /* Quitamos la flecha nativa molesta */
+  transition: border-color 0.2s ease;
+}
+
+.filterSelect:focus {
+  border-color: var(--blue-playstation);
+  box-shadow: 0 0 10px rgba(0, 114, 206, 0.3);
+}
+
+/* Pequeña flecha personalizada para el desplegable */
+.selectWrapper::after {
+  content: "▼";
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Botón interactivo de favoritos */
+.filterBtn {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--text-muted);
+}
+
+/* 1. Alineación en la misma línea para la estrella y el texto */
+.favFilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Espacio exacto entre la estrella y la palabra */
+}
+
+/* 2. Estilo del botón de favoritos CUANDO ESTÁ SELECCIONADO (Filtro Activo) */
+.favFilter.active {
+  background-color: rgba(245, 158, 11, 0.15) !important; /* Fondo dorado translúcido (Adios al rojo) */
+  border-color: #f59e0b !important; /* Borde dorado */
+  color: #ffffff !important; /* Texto blanco */
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25); /* Destello sutil */
+}
+
+/* Tamaño de la estrella dentro del botón del filtro si necesitas forzarlo */
+.filterStarIcon {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+}

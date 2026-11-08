@@ -1,37 +1,36 @@
-import { useState } from "react";
-import { useCart } from "../../context/CartContext";
-import { IconoEstrellaVacia } from "./IconoEstrellaVacia";
-import { IconoEstrellaRellena } from "./IconoEstrellaRellena";
+import { Link } from "react-router-dom";
+import { useCart } from "../../context/CartContext"; // Usamos el contexto global
+import { IconoEstrellaVacia } from "../Icons/IconoEstrellaVacia";
+import { IconoEstrellaRellena } from "../Icons/IconoEstrellaRellena";
 import styles from "./Item.module.css";
 
 export const Item = ({ game }) => {
-  const { title, price, image, favorito = false } = game;
+  const { id, title, price, image } = game;
 
-  const { addToCart } = useCart(); // 🌟 Extraemos la función del Context
+  const { addToCart, favoritos, toggleFavorito } = useCart();
 
-  const [isFavorite, setIsFavorite] = useState(favorito);
-
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
+  const isFavorite = favoritos.includes(id);
 
   return (
     <div className={styles.gameCard}>
-      <div className={styles.gameImageContainer}>
-        <img src={image} alt={title} className={styles.gameImage} />
-      </div>
+      <Link to={`/producto/${id}`} className={styles.gameImageLink}>
+        <div className={styles.gameImageContainer}>
+          <img src={image} alt={title} className={styles.gameImage} />
+        </div>
+      </Link>
 
       <div className={styles.gameInfo}>
         <div className={styles.titleContainer}>
           <button
             className={`${styles.favoriteBtn} ${isFavorite ? styles.activeFav : ""}`}
-            onClick={toggleFavorite}
+            // Ejecutamos la función del contexto pasando el ID de este juego
+            onClick={() => toggleFavorito(id)}
             title={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
           >
             {isFavorite ? (
-              <IconoEstrellaRellena className={styles.starIcon} />
+              <IconoEstrellaRellena isActive={true} />
             ) : (
-              <IconoEstrellaVacia className={styles.starIcon} />
+              <IconoEstrellaVacia isActive={false} />
             )}
           </button>
 

@@ -1,22 +1,31 @@
 import { ItemList } from "../ItemList/Itemlist";
 import { Spinner } from "../Spinner/Spinner";
-
 import { useState, useEffect } from "react";
+import { useCart } from "../../context/CartContext";
+// 1. Importamos tus íconos desde la nueva ubicación central
+import { IconoEstrellaVacia } from "../Icons/IconoEstrellaVacia";
+import { IconoEstrellaRellena } from "../Icons/IconoEstrellaRellena";
+import styles from "./ItemListContainer.module.css";
 
 export function ItemListContainer({ Mensaje }) {
   const [productos, setProductos] = useState([]);
   const [error, setError] = useState(null);
   const [cargando, setCargando] = useState(true);
 
+  const [categoriaSel, setCategoriaSel] = useState("");
+  const [statusSel, setStatusSel] = useState("");
+  const [starsSel, setStarsSel] = useState("");
+  const [soloFavoritos, setSoloFavoritos] = useState(false);
+
+  const { favoritos } = useCart();
+
   useEffect(() => {
     const obtenerProductos = async () => {
       try {
         const respuesta = await fetch("/data/productos.json");
-
         if (!respuesta.ok) {
           throw new Error("No se pudo cargar la información de los productos");
         }
-
         const datos = await respuesta.json();
         setProductos(datos);
       } catch (error) {
@@ -25,22 +34,88 @@ export function ItemListContainer({ Mensaje }) {
         setCargando(false);
       }
     };
-
     obtenerProductos();
   }, []);
 
-  if (cargando) {
-    return <Spinner />;
-  }
+  if (cargando) return <Spinner />;
+  if (error) return <p>Error: {error}</p>;
 
-  if (error) {
-    return <p>Error: {error}</p>;
-  }
+  const productosFiltrados = productos.filter((juego) => {
+    const cumpleFavorito = !soloFavoritos || favoritos.includes(juego.id);
+    const cumpleCategoria = !categoriaSel || juego.categoria === categoriaSel;
+    const cumpleStatus = !statusSel || juego.status === statusSel;
+    const cumpleStars = !starsSel || juego.stars >= Number(starsSel);
+    return cumpleFavorito && cumpleCategoria && cumpleStatus && cumpleStars;
+  });
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>{Mensaje}</h2>
-      <ItemList productos={productos} />
+
+      <div className={styles.filterBar}>
+        {/* 2. Botón de favoritos actualizado con tus componentes SVG */}
+        <button
+          className={`${styles.filterBtn} ${styles.favFilter} ${soloFavoritos ? styles.active : ""}`}
+          onClick={() => setSoloFavoritos(!soloFavoritos)}
+        >
+          {soloFavoritos ? (
+            <IconoEstrellaRellena isActive={true} />
+          ) : (
+            <IconoEstrellaVacia isActive={false} />
+          )}
+          <span>Mis Favoritos</span>
+        </button>
+
+        <div className={styles.selectWrapper}>
+          <select
+            className={styles.filterSelect}
+            value={categoriaSel}
+            onChange={(e) => setCategoriaSel(e.target.value)}
+          >
+            <option value="">Todas las Categorías</option>
+            <option value="deportes">Deportes</option>
+            <option value="guerra-shooter">Guerra / Shooter</option>
+            <option value="suspenso-terror">Suspenso / Terror</option>
+            <option value="accion-aventura">Acción / Aventura</option>
+            <option value="accion">Acción</option>
+            <option value="simulacion">Simulación</option>
+          </select>
+        </div>
+
+        <div className={styles.selectWrapper}>
+          <select
+            className={styles.filterSelect}
+            value={statusSel}
+            onChange={(e) => setStatusSel(e.target.value)}
+          >
+            <option value="">Cualquier Estado</option>
+            <option value="masVendido">Más Vendidos</option>
+            <option value="preventa">Preventas</option>
+            <option value="ofertas">Offers</option>
+          </select>
+        </div>
+
+        <div className={styles.selectWrapper}>
+          <select
+            className={styles.filterSelect}
+            value={starsSel}
+            onChange={(e) => setStarsSel(e.target.value)}
+          >
+            <option value="">Calificación</option>
+            <option value="5">⭐⭐⭐⭐⭐ (5 Estrellas)</option>
+            <option value="4">⭐⭐⭐⭐ (4 o más)</option>
+            <option value="3">⭐⭐⭐ (3 o más)</option>
+          </select>
+        </div>
+      </div>
+
+      {productosFiltrados.length > 0 ? (
+        <ItemList productos={productosFiltrados} />
+      ) : (
+        <p className={styles.noResults}>
+          No se encontraron juegos que coincidan con estos filtros.
+        </p>
+      )}
     </div>
   );
 }
