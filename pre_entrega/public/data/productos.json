@@ -7,7 +7,9 @@
     "title": "EA SPORTS FC 24 PS4",
     "price": 24490,
     "status": "masVendido",
-    "stock": 14
+    "stock": 14,
+    "categoria": "deportes",
+    "descripcion": "Vive la experiencia futbolística más realista con la tecnología HyperMotionV. Gestiona tu club favorito, compite en Ultimate Team y domina la cancha con mecánicas de juego totalmente renovadas."
   },
   {
     "id": 2,
@@ -17,7 +19,9 @@
     "title": "NBA 2K24 PS4",
     "price": 38514,
     "status": "preventa",
-    "stock": 3
+    "stock": 3,
+    "categoria": "deportes",
+    "descripcion": "Salta a la cancha y experimenta el mejor baloncesto del mundo. Disfruta de un gameplay puro, gráficos espectaculares y modos de juego profundos que rinden homenaje a las leyendas de la NBA."
   },
   {
     "id": 3,
@@ -27,7 +31,9 @@
     "title": "CALL OF DUTY MODERN WARFARE II PS4",
     "price": 32764,
     "status": "masVendido",
-    "stock": 29
+    "stock": 29,
+    "categoria": "guerra-shooter",
+    "descripcion": "Regresa la icónica Fuerza operativa 141 en una campaña global de alto riesgo. Enfrenta misiones tácticas e intensos combates multijugador con un arsenal de armas completamente personalizable."
   },
   {
     "id": 4,
@@ -37,7 +43,9 @@
     "title": "Dead Island II PS4",
     "price": 43996,
     "status": "preventa",
-    "stock": 8
+    "stock": 8,
+    "categoria": "accion-terror",
+    "descripcion": "Un virus mortal se propaga por Los Ángeles, transformando la ciudad en un infierno zombi. Sobrevive, evoluciona y conviértete en el cazador definitivo en esta sangrienta aventura de acción."
   },
   {
     "id": 5,
@@ -47,7 +55,9 @@
     "title": "Resident Evil 4 Remake PS4",
     "price": 25490,
     "status": "preventa",
-    "stock": 22
+    "stock": 22,
+    "categoria": "suspenso-terror",
+    "descripcion": "Acompaña al agente Leon S. Kennedy en su misión para rescatar a la hija del presidente en un aislado pueblo europeo controlado por un culto terrorífico. Un clásico reimaginado con gráficos modernos."
   },
   {
     "id": 6,
@@ -57,7 +67,9 @@
     "title": "WWE 2K23",
     "price": 21264,
     "status": "masVendido",
-    "stock": 17
+    "stock": 17,
+    "categoria": "deportes",
+    "descripcion": "Súbete al cuadrilátero con las superestrellas y leyendas más grandes de la lucha libre. Revive la legendaria carrera de John Cena y demuestra quién manda en el ring."
   },
   {
     "id": 7,
@@ -67,7 +79,9 @@
     "title": "God of War Ragnarok",
     "price": 24490,
     "status": "masVendido",
-    "stock": 1
+    "stock": 1,
+    "categoria": "accion-aventura",
+    "descripcion": "Kratos y Atreus deben viajar a cada uno de los Nueve Reinos en busca de respuestas mientras las fuerzas de Asgard se preparan para la batalla profetizada que acabará con el mundo."
   },
   {
     "id": 8,
@@ -77,7 +91,9 @@
     "title": "Fifa 23 Español Latino PS4",
     "price": 21264,
     "status": "preventa",
-    "stock": 25
+    "stock": 25,
+    "categoria": "deportes",
+    "descripcion": "El juego de todo el mundo une la emoción del fútbol masculino y femenino. Disfruta de torneos internacionales como la Copa del Mundo y compite al máximo nivel."
   },
   {
     "id": 9,
@@ -87,7 +103,9 @@
     "title": "NBA 2K23",
     "price": 20114,
     "status": "ofertas",
-    "stock": 11
+    "stock": 11,
+    "categoria": "deportes",
+    "descripcion": "Demuestra tu talento en Mi CARRERA, compite con los mejores equipos del mundo y revive los hitos más emblemáticos de Michael Jordan en un simulador deportivo de primer nivel."
   },
   {
     "id": 10,
@@ -97,7 +115,9 @@
     "title": "GTA Trilogi",
     "price": 31614,
     "status": "preventa",
-    "stock": 30
+    "stock": 30,
+    "categoria": "accion",
+    "descripcion": "Tres ciudades icónicas, tres historias épicas. Juega a los clásicos que definieron un género: GTA III, Vice City y San Andreas, actualizados con mejoras visuales y controles modernos."
   },
   {
     "id": 11,
@@ -107,7 +127,9 @@
     "title": "A Way Out PS4",
     "price": 25490,
     "status": "ofertas",
-    "stock": 6
+    "stock": 6,
+    "categoria": "accion-aventura",
+    "descripcion": "Una aventura cooperativa obligatoria donde controlas a dos prisioneros en su audaz fuga de la cárcel. Trabaja en equipo para superar desafíos, persecuciones y resolver una intensa historia emocional."
   },
   {
     "id": 12,
@@ -117,7 +139,9 @@
     "title": "Ace Combat 7: Skies Unknown",
     "price": 15514,
     "status": "masVendido",
-    "stock": 19
+    "stock": 19,
+    "categoria": "accion",
+    "descripcion": "Conviértete en un piloto de élite y vuela por cielos fotorrealistas. Enfréntate a intensos combates aéreos tácticos utilizando cazas de combate de última generación en misiones cargadas de adrenalina."
   },
   {
     "id": 13,
@@ -127,7 +151,9 @@
     "title": "Airport Simulator : Day & Night",
     "price": 9660,
     "status": "ofertas",
-    "stock": 14
+    "stock": 14,
+    "categoria": "simulacion",
+    "descripcion": "Gestiona un aeropuerto internacional las 24 horas del día. Controla desde el personal y la seguridad hasta el mantenimiento de las aeronaves para asegurar un flujo constante de pasajeros."
   },
   {
     "id": 14,
@@ -137,7 +163,9 @@
     "title": "Alan Wake: Remastered",
     "price": 12650,
     "status": "preventa",
-    "stock": 2
+    "stock": 2,
+    "categoria": "suspenso-terror",
+    "descripcion": "Un thriller psicológico de suspenso donde la luz es tu única arma. Acompaña al escritor Alan Wake en la desesperada búsqueda de su esposa desaparecida en un pueblo envuelto en oscuridad."
   },
   {
     "id": 15,
@@ -147,7 +175,9 @@
     "title": "Alien: Isolation ",
     "price": 12064,
     "status": "preventa",
-    "stock": 28
+    "stock": 28,
+    "categoria": "suspenso-terror",
+    "descripcion": "Descubre el verdadero significado del miedo en una atmósfera de tensión constante. Esquiva a un implacable y mortal Xenomorfo en una estación espacial abandonada usando tu ingenio para sobrevivir."
   },
   {
     "id": 16,
@@ -157,7 +187,9 @@
     "title": "Anthem",
     "price": 17584,
     "status": "ofertas",
-    "stock": 5
+    "stock": 5,
+    "categoria": "guerra-shooter",
+    "descripcion": "Equípate con exotrajes de alta tecnología y únete a tus amigos en un caótico planeta inexplorado. Vuela, combate amenazas colosales y desbloquea el misterio de una fuerza ancestral."
   },
   {
     "id": 17,
@@ -167,7 +199,9 @@
     "title": "AO International Tennis",
     "price": 16664,
     "status": "ofertas",
-    "stock": 21
+    "stock": 21,
+    "categoria": "deportes",
+    "descripcion": "El simulador de tenis más completo y personalizable. Diseña tus propios jugadores, estadios e indumentaria, y compite contra las grandes estrellas mundiales en los torneos oficiales del circuito."
   },
   {
     "id": 18,
@@ -177,7 +211,9 @@
     "title": "Ark Survival Evolved",
     "price": 14470,
     "status": "ofertas",
-    "stock": 13
+    "stock": 13,
+    "categoria": "accion-aventura",
+    "descripcion": "Despierta varado y desnudo en una isla misteriosa llena de dinosaurios. Caza, cultiva, fabrica herramientas, construye refugios y doma a criaturas prehistóricas gigantescas para sobrevivir junto a otros jugadores."
   },
   {
     "id": 19,
@@ -187,7 +223,9 @@
     "title": "Armored Core VI Fires of Rubicon PS4",
     "price": 41964,
     "status": "masVendido",
-    "stock": 27
+    "stock": 27,
+    "categoria": "guerra-shooter",
+    "descripcion": "Pilota tu propio meca altamente personalizado en veloces batallas tridimensionales. Despliégate en misiones industriales peligrosas y destruye a las facciones enemigas con potencia de fuego masiva."
   },
   {
     "id": 20,
@@ -197,7 +235,9 @@
     "title": "Assetto Corsa",
     "price": 9764,
     "status": "masVendido",
-    "stock": 8
+    "stock": 8,
+    "categoria": "simulacion",
+    "descripcion": "El simulador de conducción definitivo que replica la física de los circuitos reales. Conduce los superdeportivos más exclusivos del mundo con una precisión de manejo quirúrgica e inmersiva."
   },
   {
     "id": 21,
@@ -207,7 +247,9 @@
     "title": "Battlefield 2042",
     "price": 11144,
     "status": "ofertas",
-    "stock": 16
+    "stock": 16,
+    "categoria": "guerra-shooter",
+    "descripcion": "Experimenta la escala de la guerra total del futuro en campos de batalla dinámicos. Participa en combates multijugador masivos potenciados por tormentas destructivas y tecnología militar avanzada."
   },
   {
     "id": 22,
@@ -217,7 +259,9 @@
     "title": "Battlefield 1",
     "price": 9764,
     "status": "ofertas",
-    "stock": 24
+    "stock": 24,
+    "categoria": "guerra-shooter",
+    "descripcion": "Descubre los inicios de la guerra total moderna en la Primera Guerra Mundial. Participa en batallas épicas de infantería, tanques y aviones en entornos dinámicos del frente global."
   },
   {
     "id": 23,
@@ -227,7 +271,9 @@
     "title": "Battlefield 4",
     "price": 17814,
     "status": "ofertas",
-    "stock": 10
+    "stock": 10,
+    "categoria": "guerra-shooter",
+    "descripcion": "Un shooter militar de acción que destruye las fronteras entre el juego y la realidad. Lidera a tu escuadrón, destruye edificios tácticos y domina el mapa con vehículos de combate terrestres y marítimos."
   },
   {
     "id": 24,
@@ -237,7 +283,9 @@
     "title": "Battlefield Hardline",
     "price": 6314,
     "status": "ofertas",
-    "stock": 12
+    "stock": 12,
+    "categoria": "guerra-shooter",
+    "descripcion": "Vive tu fantasía policíaca de atracos y persecuciones a alta velocidad. Lidera a las fuerzas de la ley o ejecuta golpes criminales perfectos en este giro estratégico de la saga Battlefield."
   },
   {
     "id": 25,
@@ -247,7 +295,9 @@
     "title": "Zombie Army 4: Dead War",
     "price": 34850,
     "status": "masVendido",
-    "stock": 7
+    "stock": 7,
+    "categoria": "accion-terror",
+    "descripcion": "Las hordas de zombis de Hitler regresan por más en este escalofriante shooter cooperativo. Enfréntate a abominaciones de las tinieblas usando armas épicas y poderes místicos devastadores."
   },
   {
     "id": 26,
@@ -257,7 +307,9 @@
     "title": "WRC Generations PS4",
     "price": 29950,
     "status": "ofertas",
-    "stock": 18
+    "stock": 18,
+    "categoria": "simulacion",
+    "descripcion": "Enfréntate a los desafíos del campeonato mundial de rally como nunca antes. Conduce vehículos híbridos competitivos, gestiona escuderías y derrapa en tramos extremos con físicas hiperrealistas."
   },
   {
     "id": 27,
@@ -267,7 +319,9 @@
     "title": "Vampyr",
     "price": 11390,
     "status": "ofertas",
-    "stock": 23
+    "stock": 23,
+    "categoria": "suspenso-terror",
+    "descripcion": "Londres, 1918. Eres el doctor Jonathan Reid, recientemente transformado en vampiro. Usa tus poderes sobrenaturales para salvar a la ciudad de una epidemia o aliéntala alimentándote de tus pacientes."
   },
   {
     "id": 28,
@@ -277,7 +331,9 @@
     "title": "Unravel Pack 1+2",
     "price": 13490,
     "status": "masVendido",
-    "stock": 5
+    "stock": 5,
+    "categoria": "accion-aventura",
+    "descripcion": "Acompaña a Yarny en hermosos paisajes nórdicos interactivos. Resuelve rompecabezas físicos basados en hilos y plataformas desafiantes, ya sea en solitario o compartiendo la aventura en cooperativo local."
   },
   {
     "id": 29,
@@ -287,7 +343,9 @@
     "title": "Uncharted 4",
     "price": 15490,
     "status": "preventa",
-    "stock": 21
+    "stock": 21,
+    "categoria": "accion-aventura",
+    "descripcion": "El cazador de tesoros retirado Nathan Drake se ve obligado a regresar al mundo de los ladrones. Embárcate en un viaje trotamundos para desenterrar una legendaria utopía pirata y su fortuna oculta."
   },
   {
     "id": 30,
@@ -297,7 +355,9 @@
     "title": "UFC 4",
     "price": 27490,
     "status": "ofertas",
-    "stock": 15
+    "stock": 15,
+    "categoria": "deportes",
+    "descripcion": "Forja tu leyenda en las artes marciales mixtas. Con un sistema de combate mejorado, derribos fluidos y dinámicas de sumisión realistas, pasa de ser un peleador amateur a campeón mundial de la UFC."
   },
   {
     "id": 31,
@@ -307,7 +367,9 @@
     "title": "Tony Hawks Pro Skater 1 y 2",
     "price": 16490,
     "status": "preventa",
-    "stock": 9
+    "stock": 9,
+    "categoria": "deportes",
+    "descripcion": "Vuelve a jugar a los títulos de skate más icónicos de todos los tiempos. Totalmente remasterizados en alta definición, encadena trucos al ritmo de una banda sonora que definió a una generación."
   },
   {
     "id": 32,
@@ -317,7 +379,9 @@
     "title": "Tom Clancy´s The Division 2",
     "price": 15490,
     "status": "preventa",
-    "stock": 13
+    "stock": 13,
+    "categoria": "guerra-shooter",
+    "descripcion": "Lidera un equipo de agentes de élite para restaurar el orden en una Washington D.C. al borde del colapso social. Un shooter de rol táctico online con misiones desafiantes de final de juego."
   },
   {
     "id": 33,
@@ -327,7 +391,9 @@
     "title": "Tom Clancy´s Rainbows Six Siegue SUBS",
     "price": 16490,
     "status": "ofertas",
-    "stock": 26
+    "stock": 26,
+    "categoria": "guerra-shooter",
+    "descripcion": "Domina el arte de la destrucción y los dispositivos tácticos en enfrentamientos policiales de alta tensión. Coordina defensas blindadas o asalta fortificaciones en este letal multijugador competitivo."
   },
   {
     "id": 34,
@@ -337,7 +403,10 @@
     "title": "Tom Clancy´s Rainbows Six: Extraction",
     "price": 15490,
     "status": "ofertas",
-    "stock": 4
+    "stock": 4,
+    "guerra-shooter": "accion",
+    "categoria": "guerra-shooter",
+    "descripcion": "Une fuerzas en este shooter cooperativo táctico para tres jugadores. Enfréntate a una letal amenaza mutante alienígena en constante evolución ejecutando incursiones coordinadas de alto riesgo."
   },
   {
     "id": 35,
@@ -347,7 +416,9 @@
     "title": "Tom Clancy´s Ghost Recon Breakpoint",
     "price": 45490,
     "status": "ofertas",
-    "stock": 20
+    "stock": 20,
+    "categoria": "guerra-shooter",
+    "descripcion": "Conviértete en un soldado de operaciones especiales varado tras las líneas enemigas. Sobrevive en un mundo abierto hostil mientras te enfrentas a un grupo paramilitar renegado letal."
   },
   {
     "id": 36,
@@ -357,7 +428,9 @@
     "title": "The Witcher 3: Wild Hunt - Subtitulado",
     "price": 15490,
     "status": "preventa",
-    "stock": 17
+    "stock": 17,
+    "categoria": "accion-aventura",
+    "descripcion": "Conviértete en el cazador de monstruos Geralt de Rivia y explora un gigantesco continente de fantasía oscura. Busca a la niña de la profecía en una obra maestra narrativa inolvidable."
   },
   {
     "id": 37,
@@ -367,7 +440,9 @@
     "title": "The Texas Saw Massacre",
     "price": 28490,
     "status": "ofertas",
-    "stock": 22
+    "stock": 22,
+    "categoria": "suspenso-terror",
+    "descripcion": "Toma el papel de la macabra familia Slaughter o de sus víctimas en esta asimétrica experiencia de terror en tercera persona basada en la icónica y perturbadora película de culto de 1974."
   },
   {
     "id": 38,
@@ -377,7 +452,9 @@
     "title": "The Last of us Remastered",
     "price": 19465,
     "status": "ofertas",
-    "stock": 8
+    "stock": 8,
+    "categoria": "accion-aventura",
+    "descripcion": "Una aventura cinematográfica desgarradora. Cruza unos Estados Unidos devastados acompañando al contrabandista Joel y a la joven Ellie en un viaje brutal por la supervivencia humana."
   },
   {
     "id": 39,
@@ -387,7 +464,9 @@
     "title": "The Last of us Parte 2",
     "price": 36490,
     "status": "preventa",
-    "stock": 11
+    "stock": 11,
+    "categoria": "accion-aventura",
+    "descripcion": "Cinco años después de su peligroso viaje, Ellie busca venganza en una emotiva historia de supervivencia. Enfrenta dilemas morales devastadores en un mundo postapocalíptico implacable y lleno de peligros."
   },
   {
     "id": 40,
@@ -397,7 +476,9 @@
     "title": "The Hunter: Call of the Wild",
     "price": 23490,
     "status": "ofertas",
-    "stock": 14
+    "stock": 14,
+    "categoria": "simulacion",
+    "descripcion": "El simulador de caza más inmersivo jamás creado. Explora un inmenso mundo abierto fotorrealista lleno de vida salvaje, rastrea presas con mecánicas realistas y compite con amigos en modo cooperativo."
   },
   {
     "id": 41,
@@ -407,7 +488,9 @@
     "title": "Stray",
     "price": 22490,
     "status": "preventa",
-    "stock": 2
+    "stock": 2,
+    "categoria": "accion-aventura",
+    "descripcion": "Controla a un gato callejero perdido en una ciberciudad decadente y habitada por robots. Resuelve acertijos ambientales, defiéndete de amenazas imprevistas y encuentra el camino de regreso a casa."
   },
   {
     "id": 42,
@@ -417,7 +500,9 @@
     "title": "Spider-Man: Game of The Year Español",
     "price": 23490,
     "status": "preventa",
-    "stock": 19
+    "stock": 19,
+    "categoria": "accion",
+    "descripcion": "Conviértete en Peter Parker en una aventura de mundo abierto espectacular. Domina el balanceo con telarañas, los combates fluidos y disfruta de la edición definitiva que incluye todos los capítulos descargables."
   },
   {
     "id": 43,
@@ -427,7 +512,9 @@
     "title": "Spider-Man: Miles Morales",
     "price": 23490,
     "status": "masVendido",
-    "stock": 27
+    "stock": 27,
+    "categoria": "accion",
+    "descripcion": "Sigue el ascenso del joven Miles Morales mientras se adapta a sus nuevos e increíbles poderes bioeléctricos. Protege a su vecindario de Nueva York de una caótica guerra de bandas criminales."
   },
   {
     "id": 44,
@@ -437,7 +524,9 @@
     "title": "Sonic Mania",
     "price": 15490,
     "status": "masVendido",
-    "stock": 6
+    "stock": 6,
+    "categoria": "simulacion",
+    "descripcion": "La celebración definitiva del pasado y el futuro de la velocidad en 2D. Corre por zonas clásicas reimaginadas y nuevos niveles con Sonic, Tails y Knuckles en un homenaje perfecto a los 16 bits."
   },
   {
     "id": 45,
@@ -447,6 +536,8 @@
     "title": "Sonic Origins",
     "price": 36490,
     "status": "preventa",
-    "stock": 12
+    "stock": 12,
+    "categoria": "simulacion",
+    "descripcion": "Revive los orígenes de Sonic el Erizo en esta genial colección remasterizada. Juega las entregas clásicas de SEGA con gráficos en alta definición, modos de juego inéditos y desafíos totalmente nuevos."
   }
 ]
