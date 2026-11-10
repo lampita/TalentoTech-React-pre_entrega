@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-
+import { IconoEstrellaRellena } from "../components/Icons/IconoEstrellaRellena"; 
 import { Spinner } from "../components/Spinner/Spinner";
 import styles from "./DetalleProducto.module.css";
 

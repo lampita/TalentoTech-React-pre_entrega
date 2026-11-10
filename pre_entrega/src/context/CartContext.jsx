@@ -1,50 +1,31 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
-  const [favoritos, setFavoritos] = useState([]);
+  // 🛒 1. ESTADO DEL CARRITO: Con lectura inicial de LocalStorage
+  const [cart, setCart] = useState(() => {
+    const carritoGuardado = localStorage.getItem("ps4_store_cart");
+    return carritoGuardado ? JSON.parse(carritoGuardado) : [];
+  });
 
-  const addToCart = (game) => {
-    setCart((prevCart) => {
-      const itemExists = prevCart.find((item) => item.id === game.id);
+  // ⭐ 2. ESTADO DE FAVORITOS: Con lectura inicial de LocalStorage
+  const [favoritos, setFavoritos] = useState(() => {
+    const favoritosGuardados = localStorage.getItem("ps4_store_favorites");
+    return favoritosGuardados ? JSON.parse(favoritosGuardados) : [];
+  });
 
-      if (itemExists) {
-        if (itemExists.quantity >= game.stock) {
-          alert(`¡Lo sentimos! No hay más stock disponible de ${game.title}`);
-          return prevCart;
-        }
-        return prevCart.map((item) =>
-          item.id === game.id ? { ...item, quantity: item.quantity + 1 } : item,
-        );
-      }
+  // 🔄 3. SINCRONIZACIÓN AUTOMÁTICA DEL CARRITO
+  useEffect(() => {
+    localStorage.setItem("ps4_store_cart", JSON.stringify(cart));
+  }, [cart]);
 
-      return [...prevCart, { ...game, quantity: 1 }];
-    });
-  };
+  // 🔄 4. SINCRONIZACIÓN AUTOMÁTICA DE FAVORITOS
+  useEffect(() => {
+    localStorage.setItem("ps4_store_favorites", JSON.stringify(favoritos));
+  }, [favoritos]);
 
-  const decreaseQuantity = (gameId) => {
-    setCart((prevCart) =>
-      prevCart
-        .map((item) =>
-          item.id === gameId ? { ...item, quantity: item.quantity - 1 } : item,
-        )
-        .filter((item) => item.quantity > 0),
-    );
-  };
-
-  const removeItem = (gameId) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== gameId));
-  };
-
-  const clearCart = () => setCart([]);
-
-  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-  const totalPrice = cart.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0,
-  );
+  // ⚙️ Función global para favoritos (Toggle)
   const toggleFavorito = (gameId) => {
     setFavoritos((prevFavoritos) => {
       if (prevFavoritos.includes(gameId)) {
@@ -54,19 +35,51 @@ export const CartProvider = ({ children }) => {
       }
     });
   };
-console.log(favoritos)
+
+  // ⚙️ Funciones del carrito (Mantenlas tal cual las tenías)
+  const addToCart = (item) => {
+    setCart((prevCart) => {
+      const existe = prevCart.find((prod) => prod.id === item.id);
+      if (existe) {
+        return prevCart.map((prod) =>
+          prod.id === item.id ? { ...prod, quantity: prod.quantity + 1 } : prod
+        );
+      }
+      return [...prevCart, { ...item, quantity: 1 }];
+    });
+  };
+
+  const decreaseQuantity = (id) => {
+    setCart((prevCart) =>
+      prevCart.map((prod) =>
+        prod.id === id ? { ...prod, quantity: Math.max(1, prod.quantity - 1) } : prod
+      )
+    );
+  };
+
+  const removeItem = (id) => {
+    setCart((prevCart) => prevCart.filter((prod) => prod.id !== id));
+  };
+
+  const clearCart = () => {
+    setCart([]);
+  };
+
+  const totalItems = cart.reduce((acc, prod) => acc + prod.quantity, 0);
+  const totalPrice = cart.reduce((acc, prod) => acc + prod.price * prod.quantity, 0);
+
   return (
-    <CartContext.Provider
-      value={{
-        cart,
-        addToCart,
+    <CartContext.Provider 
+      value={{ 
+        cart, 
+        addToCart, 
         decreaseQuantity,
         removeItem,
         clearCart,
         totalItems,
         totalPrice,
-        favoritos,
-        toggleFavorito,
+        favoritos,       
+        toggleFavorito   
       }}
     >
       {children}

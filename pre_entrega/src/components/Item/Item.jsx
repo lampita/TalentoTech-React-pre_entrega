@@ -1,15 +1,29 @@
+import { useState } from "react"; // 1. Importamos useState
 import { Link } from "react-router-dom";
-import { useCart } from "../../context/CartContext"; // Usamos el contexto global
+import { useCart } from "../../context/CartContext"; 
 import { IconoEstrellaVacia } from "../Icons/IconoEstrellaVacia";
 import { IconoEstrellaRellena } from "../Icons/IconoEstrellaRellena";
 import styles from "./Item.module.css";
 
 export const Item = ({ game }) => {
   const { id, title, price, image } = game;
-
   const { addToCart, favoritos, toggleFavorito } = useCart();
 
+  // 2. Estado local para controlar el retardo y deshabilitar el botón
+  const [isAdding, setIsAdding] = useState(false);
+
   const isFavorite = favoritos.includes(id);
+
+  // 3. Función manejadora del click con retardo
+  const handleAddToCart = () => {
+    setIsAdding(true); // Deshabilita el botón y cambia el texto inmediatamente
+    addToCart(game);   // Agrega el juego al carrito
+
+    // Retardo de 1500 milisegundos (1.5 segundos) antes de volver a habilitarlo
+    setTimeout(() => {
+      setIsAdding(false);
+    }, 1000);
+  };
 
   return (
     <div className={styles.gameCard}>
@@ -22,8 +36,7 @@ export const Item = ({ game }) => {
       <div className={styles.gameInfo}>
         <div className={styles.titleContainer}>
           <button
-            className={`${styles.favoriteBtn} ${isFavorite ? styles.activeFav : ""}`}
-            // Ejecutamos la función del contexto pasando el ID de este juego
+            className={`${styles.favoriteBtn}`}
             onClick={() => toggleFavorito(id)}
             title={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
           >
@@ -43,11 +56,14 @@ export const Item = ({ game }) => {
               $ {price ? price.toLocaleString("es-AR") : " N/D "}
             </span>
           </div>
+          
+          {/* 4. Enlazamos el botón al estado 'isAdding' */}
           <button
-            className={styles.addToCartBtn}
-            onClick={() => addToCart(game)}
+            className={`${styles.addToCartBtn} ${isAdding ? styles.btnDisabled : ""}`}
+            onClick={handleAddToCart}
+            disabled={isAdding} // React se encarga de deshabilitarlo nativamente
           >
-            Agregar
+            {isAdding ? "¡Agregado! 🛒" : "Agregar"}
           </button>
         </div>
       </div>

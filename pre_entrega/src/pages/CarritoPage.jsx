@@ -4,6 +4,7 @@ import { BotonTriangulo } from "../components/BotonesMando/BotonTriangulo";
 import { BotonEquis } from "../components/BotonesMando/BotonEquis";
 import { BotonCuadrado } from "../components/BotonesMando/BotonCuadrado";
 import { BotonCirculo } from "../components/BotonesMando/BotonCirculo";
+import { Tooltip } from "react-tooltip";
 import styles from "./CarritoPage.module.css";
 
 export const CarritoPage = () => {
@@ -20,8 +21,9 @@ export const CarritoPage = () => {
   if (cart.length === 0) {
     return (
       <div className={styles.emptyContainer}>
+        {/* Corrección de barra invertida de Windows a barra web estándar '/' */}
         <img
-          src="src\assets\images\cart\mariokart.png"
+          src="src/assets/images/cart/mariokart.png"
           alt="Carrito Vacío"
           className={styles.marioImage}
         />
@@ -71,25 +73,34 @@ export const CarritoPage = () => {
                 </span>
               </div>
 
+              {/* Contenedor del mando con los Tooltips enlazados */}
               <div className={styles.dpadContainer}>
                 <BotonTriangulo
                   className={`${styles.dpadBtn} ${styles.topBtn}`}
                   onClick={() => addToCart(item)}
+                  data-tooltip-id="mando-tooltip"
+                  data-tooltip-content="Uno más"
                 />
 
                 <BotonCuadrado
                   className={`${styles.dpadBtn} ${styles.leftBtn}`}
                   onClick={() => removeItem(item.id)}
+                  data-tooltip-id="mando-tooltip"
+                  data-tooltip-content="Eliminar del carrito"
                 />
 
                 <BotonCirculo
                   className={`${styles.dpadBtn} ${styles.rightBtn}`}
                   onClick={() => navigate("/productos")}
+                  data-tooltip-id="mando-tooltip"
+                  data-tooltip-content="Volver a productos"
                 />
 
                 <BotonEquis
                   className={`${styles.dpadBtn} ${styles.bottomBtn}`}
                   onClick={() => decreaseQuantity(item.id)}
+                  data-tooltip-id="mando-tooltip"
+                  data-tooltip-content="Uno menos"
                 />
               </div>
             </div>
@@ -99,7 +110,6 @@ export const CarritoPage = () => {
             Vaciar Carrito 🗑️
           </button>
         </div>
-
 
         <div className={styles.summaryCard}>
           <h3 className={styles.summaryTitle}>Resumen del Pedido</h3>
@@ -130,6 +140,22 @@ export const CarritoPage = () => {
           </button>
         </div>
       </div>
+
+      {/* Declaración única del Tooltip estilizado para el control */}
+      <Tooltip 
+        id="mando-tooltip" 
+        place="top" 
+        style={{ 
+          backgroundColor: "#121926", 
+          color: "#ffffff",
+          border: "1px solid #0072ce",
+          borderRadius: "8px",
+          fontFamily: "Plus Jakarta Sans, sans-serif",
+          fontSize: "0.85rem",
+          boxShadow: "0 4px 15px rgba(0, 114, 206, 0.3)",
+          zIndex: 999
+        }} 
+      />
     </div>
   );
 };
