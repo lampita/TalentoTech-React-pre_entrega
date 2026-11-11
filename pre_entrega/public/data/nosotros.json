@@ -1,29 +1,29 @@
 [
   {
     "id": 1,
-    "nombre": "Arthur Lamparelli",
-    "foto": "/images/nosotros/Arthur.jpg",
+    "nombre": "Jose Lamparelli",
+    "foto": "/images/nosotros/Jose_80.jpg",
     "cargo": "CEO",
     "mail": "alamparelli@ps4store.com"
   },
   {
     "id": 2,
-    "nombre": "Damian Navarro",
-    "foto": "/images/nosotros/Damian.jpg",
+    "nombre": "Juan Navarro",
+    "foto": "/images/nosotros/Juan_80.jpg",
     "cargo": "Soporte Técnico",
     "mail": "dnavarro@ps4store.com"
   },
   {
     "id": 3,
-    "nombre": "Elena Rodriguez",
-    "foto": "/images/nosotros/Elena.jpg",
+    "nombre": "Gabriela Rodriguez",
+    "foto": "/images/nosotros/Gabriela_80.jpg",
     "cargo": "Atención al Público",
     "mail": "erodriguez@ps4store.com"
   },
   {
     "id": 4,
-    "nombre": "Kaelem Hicker",
-    "foto": "/images/nosotros/Kaelem.jpg",
+    "nombre": "Pedro Sosa",
+    "foto": "/images/nosotros/Pedro_80.jpg",
     "cargo": "Atención al Público",
     "mail": "khicker@ps4store.com"
   }

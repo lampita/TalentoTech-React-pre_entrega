@@ -1,9 +1,8 @@
-import styles from "./Icons.module.css"; // 1. Importamos los estilos de los íconos
+import styles from "./Icons.module.css";
 
 export const IconoEstrellaVacia = ({ className, isActive }) => {
   return (
     <svg
-      // 2. Combinamos los estilos base, el estado activo y cualquier clase externa
       className={`${styles.starIcon} ${isActive ? styles.activeStar : ""} ${className || ""}`}
       fill="none"
       viewBox="0 0 24 24"

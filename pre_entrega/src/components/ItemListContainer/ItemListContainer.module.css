@@ -13,7 +13,6 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para los selectores desplegables personalizados */
 .selectWrapper {
   position: relative;
   min-width: 180px;
@@ -30,7 +29,7 @@
   font-size: 0.9rem;
   cursor: pointer;
   outline: none;
-  appearance: none; /* Quitamos la flecha nativa molesta */
+  appearance: none;
   transition: border-color 0.2s ease;
 }
 
@@ -39,19 +38,18 @@
   box-shadow: 0 0 10px rgba(0, 114, 206, 0.3);
 }
 
-/* Pequeña flecha personalizada para el desplegable */
 .selectWrapper::after {
   content: "▼";
   font-size: 0.7rem;
   color: var(--text-muted);
   position: absolute;
-  right: 14px;
+  right: 4px;
+
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
 }
 
-/* Botón interactivo de favoritos */
 .filterBtn {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 600;
@@ -70,7 +68,6 @@
   border-color: var(--text-muted);
 }
 
-/* 1. Alineación en la misma línea para la estrella y el texto */
 .favFilter {
   display: flex;
   align-items: center;
@@ -78,15 +75,13 @@
   gap: 8px; /* Espacio exacto entre la estrella y la palabra */
 }
 
-/* 2. Estilo del botón de favoritos CUANDO ESTÁ SELECCIONADO (Filtro Activo) */
 .favFilter.active {
-  background-color: rgba(245, 158, 11, 0.15) !important; /* Fondo dorado translúcido (Adios al rojo) */
-  border-color: #f59e0b !important; /* Borde dorado */
-  color: #ffffff !important; /* Texto blanco */
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25); /* Destello sutil */
+  background-color: rgba(245, 158, 11, 0.15) !important;
+  border-color: #f59e0b !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
 }
 
-/* Tamaño de la estrella dentro del botón del filtro si necesitas forzarlo */
 .filterStarIcon {
   width: 22px;
   height: 22px;
@@ -101,7 +96,6 @@
   width: 100%;
 }
 
-/* Botón estilizado para salir del modo búsqueda */
 .backFilterBtn {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 600;
@@ -122,7 +116,6 @@
   border-color: var(--text-muted);
 }
 
-/* Estructura de la barra de entrada expandida */
 .searchWrapper {
   position: relative;
   flex: 1;

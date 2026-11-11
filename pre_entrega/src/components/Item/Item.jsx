@@ -1,4 +1,4 @@
-import { useState } from "react"; // 1. Importamos useState
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext"; 
 import { IconoEstrellaVacia } from "../Icons/IconoEstrellaVacia";
@@ -9,20 +9,20 @@ export const Item = ({ game }) => {
   const { id, title, price, image } = game;
   const { addToCart, favoritos, toggleFavorito } = useCart();
 
-  // 2. Estado local para controlar el retardo y deshabilitar el botón
+  
   const [isAdding, setIsAdding] = useState(false);
 
   const isFavorite = favoritos.includes(id);
 
-  // 3. Función manejadora del click con retardo
+  
   const handleAddToCart = () => {
-    setIsAdding(true); // Deshabilita el botón y cambia el texto inmediatamente
-    addToCart(game);   // Agrega el juego al carrito
+    setIsAdding(true);
+    addToCart(game);
 
-    // Retardo de 1500 milisegundos (1.5 segundos) antes de volver a habilitarlo
+    
     setTimeout(() => {
       setIsAdding(false);
-    }, 1000);
+    }, 800);
   };
 
   return (
@@ -57,13 +57,13 @@ export const Item = ({ game }) => {
             </span>
           </div>
           
-          {/* 4. Enlazamos el botón al estado 'isAdding' */}
+    
           <button
             className={`${styles.addToCartBtn} ${isAdding ? styles.btnDisabled : ""}`}
             onClick={handleAddToCart}
-            disabled={isAdding} // React se encarga de deshabilitarlo nativamente
+            disabled={isAdding}
           >
-            {isAdding ? "¡Agregado! 🛒" : "Agregar"}
+            {isAdding ? "Agregado!" : "Agregar"}
           </button>
         </div>
       </div>

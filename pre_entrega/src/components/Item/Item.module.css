@@ -48,7 +48,6 @@
   margin: 6px 0 14px 0;
 }
 
-/* El botón ahora es solo el contenedor que agranda la estrella interna al hacer hover */
 .favoriteBtn {
   background: none;
   border: none;
@@ -66,7 +65,7 @@
 .gameTitle {
   color: #ffffff;
   font-size: 1.1rem;
-  margin: 0; 
+  margin: 0;
   font-family: "Space Grotesk", sans-serif;
   white-space: nowrap;
   overflow: hidden;
@@ -126,6 +125,6 @@
 .gameImageLink {
   display: block;
   width: 100%;
-  text-decoration: none; 
+  text-decoration: none;
   cursor: pointer;
 }

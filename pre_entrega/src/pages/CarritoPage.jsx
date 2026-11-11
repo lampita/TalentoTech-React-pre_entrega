@@ -21,7 +21,7 @@ export const CarritoPage = () => {
   if (cart.length === 0) {
     return (
       <div className={styles.emptyContainer}>
-        {/* Corrección de barra invertida de Windows a barra web estándar '/' */}
+        
         <img
           src="src/assets/images/cart/mariokart.png"
           alt="Carrito Vacío"
@@ -141,7 +141,7 @@ export const CarritoPage = () => {
         </div>
       </div>
 
-      {/* Declaración única del Tooltip estilizado para el control */}
+      
       <Tooltip 
         id="mando-tooltip" 
         place="top" 

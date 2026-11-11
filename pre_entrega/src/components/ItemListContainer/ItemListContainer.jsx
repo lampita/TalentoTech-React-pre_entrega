@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useCart } from "../../context/CartContext";
 import { IconoEstrellaVacia } from "../Icons/IconoEstrellaVacia";
 import { IconoEstrellaRellena } from "../Icons/IconoEstrellaRellena";
-import { Tooltip } from "react-tooltip";
+
 import styles from "./ItemListContainer.module.css";
 
 export function ItemListContainer({ Mensaje }) {
@@ -12,15 +12,13 @@ export function ItemListContainer({ Mensaje }) {
   const [error, setError] = useState(null);
   const [cargando, setCargando] = useState(true);
 
-  // Estados de los filtros tradicionales
   const [categoriaSel, setCategoriaSel] = useState("");
   const [statusSel, setStatusSel] = useState("");
   const [starsSel, setStarsSel] = useState("");
   const [soloFavoritos, setSoloFavoritos] = useState(false);
 
-  // Estados para la nueva lógica de búsqueda aislada
   const [busqueda, setBusqueda] = useState("");
-  const [modoBusqueda, setModoBusqueda] = useState(false); // Controla qué vista mostrar
+  const [modoBusqueda, setModoBusqueda] = useState(false);
 
   const { favoritos } = useCart();
 
@@ -45,14 +43,11 @@ export function ItemListContainer({ Mensaje }) {
   if (cargando) return <Spinner />;
   if (error) return <p>Error: {error}</p>;
 
-  // Lógica de filtrado con separación absoluta
   const productosFiltrados = productos.filter((juego) => {
     if (modoBusqueda) {
-      // Si estamos en modo búsqueda, ignora TODO lo demás y filtra en todo el catálogo
       return juego.title.toLowerCase().includes(busqueda.toLowerCase());
     }
 
-    // Si no, aplica el filtrado tradicional combinado
     const cumpleFavorito = !soloFavoritos || favoritos.includes(juego.id);
     const cumpleCategoria = !categoriaSel || juego.categoria === categoriaSel;
     const cumpleStatus = !statusSel || juego.status === statusSel;
@@ -61,7 +56,6 @@ export function ItemListContainer({ Mensaje }) {
     return cumpleFavorito && cumpleCategoria && cumpleStatus && cumpleStars;
   });
 
-  // Función para cerrar el buscador y resetear su texto
   const desactivarBusqueda = () => {
     setModoBusqueda(false);
     setBusqueda("");
@@ -76,7 +70,6 @@ export function ItemListContainer({ Mensaje }) {
 
       <div className={styles.filterBar}>
         {modoBusqueda ? (
-          /* ================= VISTA B: MODO BUSQUEDA ACTIVO ================= */
           <div className={styles.searchActiveContainer}>
             <button
               className={styles.backFilterBtn}
@@ -91,7 +84,7 @@ export function ItemListContainer({ Mensaje }) {
                 placeholder="Escribe el nombre del juego de PS4..."
                 value={busqueda}
                 onChange={(e) => setBusqueda(e.target.value)}
-                autoFocus // Hace foco automático al abrirse
+                autoFocus
               />
               {busqueda && (
                 <button
@@ -104,9 +97,7 @@ export function ItemListContainer({ Mensaje }) {
             </div>
           </div>
         ) : (
-          /* ================= VISTA A: PANEL DE FILTROS NORMAL ================= */
           <>
-            {/* Nuevo botón a la izquierda con el mismo estilo de los filtros */}
             <button
               className={styles.filterBtn}
               onClick={() => setModoBusqueda(true)}
@@ -173,7 +164,6 @@ export function ItemListContainer({ Mensaje }) {
         )}
       </div>
 
-      {/* Renderizado de la lista */}
       {productosFiltrados.length > 0 ? (
         <ItemList productos={productosFiltrados} />
       ) : (
@@ -181,17 +171,6 @@ export function ItemListContainer({ Mensaje }) {
           No se encontraron juegos que coincidan con la búsqueda o filtros.
         </p>
       )}
-
-      <Tooltip
-        id="tienda-tooltip"
-        place="top"
-        style={{
-          backgroundColor: "#121926",
-          color: "#ffffff",
-          border: "1px solid #0072ce",
-          borderRadius: "8px",
-        }}
-      />
     </div>
   );
 }
