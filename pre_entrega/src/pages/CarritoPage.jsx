@@ -1,5 +1,6 @@
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
+import marioImg from "../assets/images/cart/mariokart.webp";
 import { BotonTriangulo } from "../components/BotonesMando/BotonTriangulo";
 import { BotonEquis } from "../components/BotonesMando/BotonEquis";
 import { BotonCuadrado } from "../components/BotonesMando/BotonCuadrado";
@@ -21,12 +22,7 @@ export const CarritoPage = () => {
   if (cart.length === 0) {
     return (
       <div className={styles.emptyContainer}>
-        
-        <img
-          src="src/assets/images/cart/mariokart.png"
-          alt="Carrito Vacío"
-          className={styles.marioImage}
-        />
+        <img src={marioImg} alt="Carrito Vacío" className={styles.marioImage} />
         <h2 className={styles.title}>Carrito vacío !</h2>
 
         <button
@@ -141,20 +137,19 @@ export const CarritoPage = () => {
         </div>
       </div>
 
-      
-      <Tooltip 
-        id="mando-tooltip" 
-        place="top" 
-        style={{ 
-          backgroundColor: "#121926", 
+      <Tooltip
+        id="mando-tooltip"
+        place="top"
+        style={{
+          backgroundColor: "#121926",
           color: "#ffffff",
           border: "1px solid #0072ce",
           borderRadius: "8px",
           fontFamily: "Plus Jakarta Sans, sans-serif",
           fontSize: "0.85rem",
           boxShadow: "0 4px 15px rgba(0, 114, 206, 0.3)",
-          zIndex: 999
-        }} 
+          zIndex: 999,
+        }}
       />
     </div>
   );
