@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Header } from "../Header/Header";
 import Footer from "../Footer/Footer";
 import styles from "./Layout.module.css";
-import marioImg from "../../assets/images/cart/mariokart.webp"; // Ajusta la ruta a tu imagen
+import marioImg from "../../assets/images/cart/mariokart.webp";
 
 export const Layout = () => {
   useEffect(() => {
